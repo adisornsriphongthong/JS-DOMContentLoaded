@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+</head>
+<body>
+
+    <style>
+        /* Preloader styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the preloader displays on top */
+}
+
+.loader {
+    border: 8px solid #3498db; /* Loader color */
+    border-top: 8px solid #f1c40f; /* Loader color when spinning */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Rotation animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Your other CSS styles go here */
+
+    </style>
+    <!-- Your website content goes here -->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">1</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Wait for the DOM to be fully loaded
+            hidePreloader();
+        });
+        
+        function hidePreloader() {
+            // Get the preloader element
+            var preloader = document.querySelector(".preloader");
+        
+            // Hide the preloader
+            preloader.style.display = "none";
+        }
+        
+    </script>
+</body>
+</html>
